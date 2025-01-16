@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canteen Report Template</title>
+    <link rel="stylesheet" type="text/css" href="sheet.css">
+    <style>
+        .gain-table {
+            float: right;
+            margin-top: -80px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 30%;
+        }
+
+        .gain-table th, .gain-table td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .gain-table th {
+            background-color: #f2f2f2;
+        }
+
+        .gain-title {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h3>Department of Education</h3>
+        <p>REGION 4A - CALABARZON</p>
+        <p>Division of General Trias City</p>
+        <p>NAME OF SCHOOL</p>
+    </div>
+
+    <h4 class="title">CANTEEN REPORT FOR THE MONTH OF:</h4>
+
+    <table class="gain-table">
+        <thead>
+            <tr>
+                <th colspan="3" class="gain-title">ENROLLMENT</th>
+            </tr>
+            <tr>
+                <th>GAIN FOR THE MONTH</th>a
+                <th>%</th>
+                <th>Amount (₱)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Supplementary Feeding</td>
+                <td>35%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>School Clinic</td>
+                <td>5%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Faculty &amp; Student Development Fund</td>
+                <td>15%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>H.E. Instruction Fund</td>
+                <td>10%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>School Operation</td>
+                <td>25%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Revolving Capital</td>
+                <td>10%</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>TOTAL</strong></td>
+                <td><strong>100%</strong></td>
+                <td><strong>-</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="dynamic-table">
+            <tr>
+                <th>Supplementary Feeding (35%)</th>
+                <th>School Clinic (5%)</th>
+                <th>Faculty & Student Development Fund (15%)</th>
+                <th>H.E. Instructional (10%)</th>
+                <th>School Operation/ GP (25%)</th>
+                <th>Revolving Capital (10%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+                <td><input type="text" placeholder="Itemized Des." class="desc"></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Cost" class="cost supplementary"></td>
+                <td><input type="number" placeholder="Cost" class="cost clinic"></td>
+                <td><input type="number" placeholder="Cost" class="cost development"></td>
+                <td><input type="number" placeholder="Cost" class="cost instructional"></td>
+                <td><input type="number" placeholder="Cost" class="cost operation"></td>
+                <td><input type="number" placeholder="Cost" class="cost revolving"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="clickable" onclick="computeTotal('supplementary')">TOTAL: <span id="supplementary-total">0</span></td>
+                <td class="clickable" onclick="computeTotal('clinic')">TOTAL: <span id="clinic-total">0</span></td>
+                <td class="clickable" onclick="computeTotal('development')">TOTAL: <span id="development-total">0</span></td>
+                <td class="clickable" onclick="computeTotal('instructional')">TOTAL: <span id="instructional-total">0</span></td>
+                <td class="clickable" onclick="computeTotal('operation')">TOTAL: <span id="operation-total">0</span></td>
+                <td class="clickable" onclick="computeTotal('revolving')">TOTAL: <span id="revolving-total">0</span></td>
+            </tr>
+        </tfoot>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+
+    <h4 class="title">Summary</h4>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Supplementary Feeding (35%)</th>
+                <th>School Clinic (5%)</th>
+                <th>Faculty & Student Development Fund (15%)</th>
+                <th>H.E. Instructional (10%)</th>
+                <th>School Operation/ GP (25%)</th>
+                <th>Revolving Canteen Fund (10%)</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total cash on bank at the beginning of the month</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Plus income for the month</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total cash on bank</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Minus total expenses</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total cash balance on bank</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="signature-section">
+        <table>
+            <tr>
+                <td class="signature">
+                    <p>Prepared and submitted by:</p>
+                    <p>NAME</p>
+                    <p>School Canteen Teacher</p>
+                </td>
+                <td class="signature">
+                    <p>Audited by:</p>
+                    <p>NAME</p>
+                    <p>Department Head, Mathematics</p>
+                </td>
+                <td class="signature">
+                    <p>NAME</p>
+                    <p>Department Head, EPP/TLE/TVL</p>
+                </td>
+                <td class="signature">
+                    <p>Approved:</p>
+                    <p>NAME</p>
+                    <p>President, Faculty Association</p>
+                </td>
+            </tr>
+        </table>
+
+        <p class="signature">
+            JOFIT P. DAYOC<br>
+            Education Program Supervisor, EPP/TLE/TVL<br>
+            School Canteen Operation Focal
+        </p>
+    </div>
+    <script> src="excelsrc.js"</script>
+</body>
+</html>

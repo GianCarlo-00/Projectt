@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CMIS</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="dashboard-logo">
+            <h1>C.M.I.S</h1>
+            <p>Canteen Management Information System</p>
+        </div>
+        <div class="admin-info">
+            <span id="admin-name">admin_admin name</span>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+    
+
+        <aside class="dashboard-sidebar">
+            <nav>
+                <h3>Dashboard</h3>
+                <ul id="report-links">
+                    <li><a href="#">Daily Reports</a></li>
+                    <li><a href="monthlyreport.html">Monthly Report</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="summary-section">
+                <div class="summary-item green">
+                    <div class="summary-icon">
+                        <img src="Participants.png" alt="Participants">
+                    </div>
+                    <div class="summary-info">
+                        <h2 id="participants-count">No. of Participants</h2>
+                    </div>
+                </div>
+                <div class="summary-item red">
+                    <div class="summary-icon">
+                        <img src="complete.png" alt="Completed">
+                    </div>
+                    <div class="summary-info">
+                        <h2 id="completed-percentage">0% Completed</h2>
+                    </div>
+                </div>
+            </div>
+
+            <section class="report-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>School Name</th>
+                            <th>Time</th>
+                            <th>Month/Day/Year</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="report-table-body">
+                        <tr>
+                            <td colspan="4">No data available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

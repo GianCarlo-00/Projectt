@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detailed Expenses Template</title>
+    <link rel="stylesheet" type="text/css" href="expensess.css">
+</head>
+<body>
+    <div class="header">
+        <h3>Department of Education</h3>
+        <p>REGION 4A - CALABARZON</p>
+        <p>Division of General Trias City</p>
+        <p>SCHOOL</p>
+        <h4>DETAILED EXPENSES</h4>
+    </div>
+
+    <table id="table1">
+        <thead>
+            <tr class="section-title">
+                <th colspan="4">Supplementary Feeding Program</th>
+            </tr>
+            <tr>
+                <th>Receipt No.</th>
+                <th>Date</th>
+                <th>Specifics</th>
+                <th>Amount (₱)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="number" step="0.01" value="0" oninput="updateTotal('table1')"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">TOTAL</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow('table1')">Add Row</button>
+
+    <table id="table2">
+        <thead>
+            <tr class="section-title">
+                <th colspan="4">Supplementary Feeding Program</th>
+            </tr>
+            <tr>
+                <th>Receipt No.</th>
+                <th>Date</th>
+                <th>Specifics</th>
+                <th>Amount (₱)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="number" step="0.01" value="0" oninput="updateTotal('table2')"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">TOTAL</td>
+                <td>₱0.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow('table2')">Add Row</button>
+
+    <table id="table3">
+        <thead>
+            <tr class="section-title">
+                <th colspan="4">Supplementary Feeding Program</th>
+            </tr>
+            <tr>
+                <th>Receipt No.</th>
+                <th>Date</th>
+                <th>Specifics</th>
+                <th>Amount (₱)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="number" step="0.01" value="0" oninput="updateTotal('table3')"></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">TOTAL</td>
+                <td>₱0.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow('table3')">Add Row</button>
+    <script src="expen.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #002c54;
+    color: #fff;
+    padding: 20px;
+    width: 20%;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #002c54;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.report {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report p {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.report button {
+    background-color: #fff;
+    color: #4caf50;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.report button:hover {
+    background-color: #45a049;
+    color: #fff;
+}
